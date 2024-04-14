@@ -51,8 +51,10 @@ const ProductList = ({ products, setProducts, getProducts }) => {
                 <button
                   className="bg-danger text-white px-2 border-0"
                   onClick={() => {
-                    item = { ...item, amount: item.amount - 1 };
+                    if (item.amount > 1){
+                    item = {...item, amount: item.amount - 1};
                     handleAmount(item);
+                  }
                   }}
                 >
                   <i className="fa-solid fa-minus"></i>
