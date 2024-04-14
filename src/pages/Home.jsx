@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <>
-      <div>
+      <div className="header">
         <h1>Checkout Page</h1>
         <button
           className="btn btn-warning"
@@ -36,7 +36,7 @@ const Home = () => {
           {showProductBar ? "Hide Product Bar" : "Show Product Bar"}
         </button>
       </div>
-      <div>
+      <div className="bigContainer">
         {showProductBar && <ProductBar getProducts={getProducts} />}
       <ProductList products={products} setProducts={setProducts} getProducts={getProducts}/>
       </div>
